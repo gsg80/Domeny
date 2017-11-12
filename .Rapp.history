@@ -1,0 +1,136 @@
+x-> 4
+x<-4
+x
+x[2]
+x<-[2,3,4]
+x<-{2,3,4}
+www <- "dacheco.pl"#
+www
+source("/Users/gsg/Documents/R Projects/domeny_dane_kontaktowe.R")
+www <- "dacheco.pl"
+www
+res <- readHTMLTable(www)
+getHTMLLinks("http://dacheco.pl")
+XML
+library(XML)
+library(XML)#
+#
+url <- paste("http://","dacheco.pl", sep ="")#
+links <- getHTMLLinks(url)#
+links[grep(pattern = "*kontakt*", links)]#
+dane <- htmlParse(paste(url,links[grep(pattern = "*kontakt*", links)],sep=""))
+dane
+getNodeSet(dane, "<div*>")
+getNodeSet(dane, "<div* class>[@id="paragraph"]")
+getNodeSet(dane, "<div class>*[@id="paragraph"]")
+getNodeSet(dane, '<div class>*[@id="paragraph"]')
+library(XML)#
+#
+url <- paste("http://","dacheco.pl", sep ="")#
+links <- getHTMLLinks(url)#
+links[grep(pattern = "*kontakt*", links)]#
+dane <- htmlParse(paste(url,links[grep(pattern = "*kontakt*", links)],sep=""), asText=TRUE)
+library(XML)#
+library(RCurl)#
+#
+url <- paste("http://","dacheco.pl", sep ="")#
+links <- getHTMLLinks(url)#
+links[grep(pattern = "*kontakt*", links)]#
+dane <- htmlParse(paste(url,links[grep(pattern = "*kontakt*", links)],sep=""), asText=TRUE)
+dane
+library(XML)#
+library(RCurl)#
+#
+url <- paste("http://","dacheco.pl", sep ="")#
+links <- getHTMLLinks(url)#
+links[grep(pattern = "*kontakt*", links)]#
+dane <- htmlParse(paste(url,links[grep(pattern = "*kontakt*", links)],sep=""))
+dane
+danetext <- xpathSApply(dane, "//div", xmlValue)
+danetext
+danetext <- xpathSApply(dane, "//div class=", xmlValue)
+danetext <- xpathSApply(dane, "//div class", xmlValue)
+danetext <- xpathSApply(dane, "//div", xmlValue)
+danetext <- xpathSApply(dane, "//br", xmlValue)
+danetext
+danetext <- xpathSApply(dane, "//div", xmlValue)
+danetext
+dane <- xpathSApply(html, "//div[@class='paragraph']", xmlValue)
+library(XML)#
+library(RCurl)#
+#
+url <- paste("http://","dacheco.pl", sep ="")#
+links <- getHTMLLinks(url)#
+links[grep(pattern = "*kontakt*", links)]#
+html <- htmlParse(paste(url,links[grep(pattern = "*kontakt*", links)],sep=""))#
+dane <- xpathSApply(html, "//div[@class='paragraph']", xmlValue)
+dane
+library(XML)#
+library(RCurl)#
+#
+url <- paste("http://","dacheco.pl", sep ="")#
+links <- getHTMLLinks(url)#
+links[grep(pattern = "*kontakt*", links)]#
+html <- htmlParse(paste(url,links[grep(pattern = "*kontakt*", links)],sep=""))#
+dane <- xpathSApply(html, "//div[@class='paragraph']", xmlValue)
+dane
+library(XML)#
+library(RCurl)#
+#
+url <- paste("http://","meblepabianice.com", sep ="")#
+links <- getHTMLLinks(url)#
+links[grep(pattern = "*kontakt*", links)]#
+html <- htmlParse(paste(url,links[grep(pattern = "*kontakt*", links)],sep=""))#
+dane <- xpathSApply(html, "//div[@class='paragraph']", xmlValue)
+dane
+links
+html <- htmlParse(paste(url,"/kontakt.html",sep=""))
+dane <- xpathSApply(html, "//div[@class='paragraph']", xmlValue)
+dane
+dane <- xpathSApply(html, "//div[@class='paragraph']/text()[preceding-sibling::br]", xmlValue)
+dane
+dane <- xpathSApply(html, "//div[@class='paragraph']/text()[following-sibling::br]", xmlValue)
+dane
+dane <- xpathSApply(html, "//div[@class='paragraph']/text()[preceding-sibling::span and following-sibling::span]", xmlValue)
+dane
+dane <- xpathSApply(html, "//div[@class='paragraph']", xmlValue)
+dane
+dane <- xpathSApply(html, "//div[@class='paragraph']/text()[following-sibling::span]", xmlValue)
+dane
+dane <- xpathSApply(html, "//div[@class='paragraph']/text()[preceding-sibling::span]", xmlValue)
+dane
+dane <- xpathSApply(html, "//span", xmlValue)
+dane
+dane <- xpathSApply(html, "//div[@class='paragraph']", xmlValue)
+dane
+library(XML)#
+library(RCurl)#
+#
+url <- paste("http://","kancelariawroclaw.eu", sep ="")#
+links <- getHTMLLinks(url)#
+links[grep(pattern = "*kontakt*", links)]#
+html <- htmlParse(paste(url,links[grep(pattern = "*kontakt*", links)],sep=""))#
+dane <- xpathSApply(html, "//div[@class='paragraph']", xmlValue)
+dane
+links
+html <- htmlParse(links[6])
+dane <- xpathSApply(html, "//div[@class='paragraph']", xmlValue)#
+> dane
+dane <- xpathSApply(html, "//div[@class='paragraph']", xmlValue)
+dane
+dane <- xpathSApply(html, "//br", xmlValue)
+dane
+dane <- xpathSApply(html, "//br /", xmlValue)
+dane <- xpathSApply(html, "//p", xmlValue)
+dane
+library(XML)#
+library(RCurl)#
+#
+url <- paste("http://","deratyzacjakrakow.com.pl", sep ="")#
+links <- getHTMLLinks(url)#
+links[grep(pattern = "*kontakt*", links)]#
+html <- htmlParse(paste(url,links[grep(pattern = "*kontakt*", links)],sep=""))#
+dane <- xpathSApply(html, "//div[@class='paragraph']", xmlValue)
+links
+html <- htmlParse("http://deratyzacjakrakow.com.pl/kontakt/")
+source("/Users/gsg/R Projects/domeny/domeny_dane_kontaktowe_2.04.R")
